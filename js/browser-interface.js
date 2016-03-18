@@ -1,29 +1,35 @@
-//var gitUser = require('./../js/github.js').getUser;
-//var gitRepos = require('./../js/github.js').getRepos;
+var gitHub = require('./../js/github.js');
 var apiKey = require('./../.env').apiKey;
+var giphy = require('./../js/giphy.js');
+
 
 //var map = require('./../map.js');
 
 $(document).ready(function() {
+  var gifUrl = giphy.getRandomGif();
+  console.log(gifUrl);
+  $(".show-user").hide();
+  $(".gif-of-the-moment").hide();
+  
+  $(".gif-of-the-moment").fadeIn();
 
-  $('#repo-search').submit(function() {
+  $('form#user-search').submit(function(event) {
+    $('.show-user').fadeIn();
     event.preventDefault();
-    var gitUser = {};
+    gitHub.gitUser();
+    gitHub.gitRepos();
+  });
+
+  $('#getrepos').click(function(event) {
+    event.preventDefault();
     var gitUserName = $('#git-user').val();
-    $.get('https://api.github.com/users/' + gitUserName +'?access_token=' + apiKey).then(function(response){
-      console.log("iee-ok buddy here's the repo object in yer console here ya go:");
+    $.get('https://api.github.com/users/' + gitUserName +'/repos?access_token=' + apiKey).then(function(response) {
       console.log(response);
-      $('.show-user').append('<li class="git-user-name"><h2>' +
-      response.name + '</h4></li>' +
-      '<li class="avatar"><img src="' + response.avatar_url + '" alt="User Avatar"></li>' +
-      '<li><form id="repository">'+
-      '<input type=hidden id="repos" value="' + response.repos_url +'">'+
-      '<div class="get-repos"> Get '+ response.name +'\'s Projects</div></li>'+
-      '</form>');
-    }).fail(function(error){
-      console.log(error.responseJSON.message);
-    });
-//    getRepos(gitUserName);
+      // $('show-repos').append('<li>Hey there</li>'+
+      // JSON.stringify(response.login));
+      }).fail(function(error) {
+      console.log("fail" + error.message);
+      });
   });
 
 
