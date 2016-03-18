@@ -28,19 +28,19 @@ exports.gitRepos = function() {
   $.get('https://api.github.com/users/' + gitUserName +'/repos?access_token=' + apiKey + '&per_page=1000&sort=update').then(function(response) {
     console.log(response);
     for (var i = 0; i < response.length; i++) {
-      gifUrls.push(giphy.getRandomGif());
-      for (var j = 0; j < gifUrls.length; j++) {
-        $('.show-repos').append('<ul class="repo-result"><li>' + response[i].full_name + '</li>' +
-        '<li>' + response[i].description + '</li>' +
-        '<li>Project Homepage:<a target="_blank" href="'+ response[i].homepage +'">' + response[i].homepage + '</a></li>' +
-        '<li>Size: ' + response[i].size + '</li>' +
-        '<li>Number of Forks: ' + response[i].forks_count + '</li>' +
-        '<li><a target="_blank" href="'+
-        response[i].html_url +'">Open project</a></li></ul>' +
-        '<li><img border="0" align="left" src="'+ gifUrls[i] +'"></li>'
-        );
-      }
+      gifUrls.push(giphy.getRandomSmallGif());
+      $('.show-repos').append('<li><h2>' + response[i].full_name + '</h2></li>' +
+      '<li><h3>' + response[i].description + '</h3></li>' +
+      '<li><h4>Project Name: <a target="_blank" href="'+ response[i].html_url +'">' + response[i].full_name + '</a></h4></li>' +
+      '<li>Size: ' + response[i].size + '</li>' +
+      '<li>Language: ' + response[i].language + '</li>' +
+
+      '<li>Number of Forks: ' + response[i].forks_count + '</li>' +
+      '<li><a target="_blank" href="'+
+      response[i].html_url +'">Open project</a></li>'
+    );
     }
+
     console.log(gifUrls);
     }).fail(function(error) {
     console.log("fail" + error.responseJSON.message);

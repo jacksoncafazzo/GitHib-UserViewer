@@ -15,9 +15,13 @@ input[type=submit] {
   width:100%;
 }
 
-#map {
-  width: 800px;
-  height: 1000px;
+.gif-of-the-moment {
+  width: 200px;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
+  float: left;
+}
+.gif-of-the-moment img {
+
 }
