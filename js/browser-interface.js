@@ -3,7 +3,8 @@ var gitHub = require('./../js/github.js');
 
 $(document).ready(function() {
 
-  $('#git-user').submit(function(event) {
+  $('#show-me').click(function(event) {
+    event.preventDefault();
     console.log("iee-ok buddy here's the repo object in yer console here ya go:");
     gitHub.getRepos();
 

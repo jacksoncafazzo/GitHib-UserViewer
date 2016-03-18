@@ -1,4 +1,4 @@
-var apiKey = require('./../.env').GHApiKey;
+var apiKey = require('./../.env').apiKey;
 
 exports.getRepos = function(){
   $.get('https://api.github.com/users/jacksoncafazzo?access_token=' + apiKey).then(function(response){
