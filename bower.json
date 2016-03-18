@@ -1,0 +1,30 @@
+{
+  "name": "gituserapi",
+  "description": "get user repo info",
+  "main": "index.js",
+  "authors": [
+    "Jackson Cafazzo <doctorjuno@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "git",
+    "api"
+  ],
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "homepage": "https://github.com/jacksoncafazzo/GitHib-UserViewer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "moment": "^2.12.0"
+  }
+}

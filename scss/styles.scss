@@ -1,0 +1,23 @@
+form {
+  width: 50%;
+  margin:auto;
+}
+label {
+  width:25%;
+}
+label, input {
+  display: inline-block;
+}
+input {
+  width: 75%;
+}
+input[type=submit] {
+  width:100%;
+}
+
+#map {
+  width: 800px;
+  height: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
