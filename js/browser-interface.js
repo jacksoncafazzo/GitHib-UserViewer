@@ -10,7 +10,7 @@ $(document).ready(function() {
   console.log(gifUrl);
   $(".show-user").hide();
   $(".gif-of-the-moment").hide();
-  
+
   $(".gif-of-the-moment").fadeIn();
 
   $('form#user-search').submit(function(event) {

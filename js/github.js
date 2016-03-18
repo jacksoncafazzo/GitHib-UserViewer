@@ -29,9 +29,9 @@ exports.gitRepos = function() {
     console.log(response);
     for (var i = 0; i < response.length; i++) {
       gifUrls.push(giphy.getRandomSmallGif());
-      $('.show-repos').append('<li><h2>' + response[i].full_name + '</h2></li>' +
-      '<li><h3>' + response[i].description + '</h3></li>' +
-      '<li><h4>Project Name: <a target="_blank" href="'+ response[i].html_url +'">' + response[i].full_name + '</a></h4></li>' +
+      $('.show-repos').append('<li><h3>' + response[i].full_name + '</h3></li>' +
+      '<li><h4>' + response[i].description + '</h4></li>' +
+      '<li>Project Name: <a target="_blank" href="'+ response[i].html_url +'">' + response[i].full_name + '</a></li>' +
       '<li>Size: ' + response[i].size + '</li>' +
       '<li>Language: ' + response[i].language + '</li>' +
 
