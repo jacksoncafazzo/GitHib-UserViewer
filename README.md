@@ -37,6 +37,10 @@ run:
   gulp serve
 to serve the page and open it in your default browser.
 
+## Technologies Used
+
+Javascript, jQuery, HTML5, CSS3, Bootstrap, Node, Bower, SASS, Ruby
+
 ### Legal
 
 Copyright (c) 2016, Jackson Cafazzo

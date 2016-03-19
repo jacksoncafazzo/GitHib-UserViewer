@@ -11,18 +11,19 @@
   <body>
     <!-- <button id="locateUser">Get Location</button> -->
     <div class="container">
+      <div class="row header">
+        <h1>Get data on a user's github repositories</h1>
+      </div>
       <div class="row">
-        <div class="col-lg-6">
-          <h1>Get data on a user's github repositories</h1>
+        <div class="col-lg-6 col-md-6">
           <form id="user-search">
-            <label class="label-inline" for="git-user">Git User Name:</label>
-            <input id="git-user" type="text-inline">
+            <label class="label" for="git-user">Git User Name:</label>
+            <input id="git-user" type="text">
             <button id="show-me" class="btn-success">Click Here</button>
           </form>
           <a href="/">Clear Forms and refresh gif</a>
-
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <div class="row">
             <ul class="show-user">
 
@@ -38,8 +39,8 @@
           </ul>
         </div>
         <div class="col-lg-6">
-          <h3>Your gif of the moment</h3>
           <ul class="gif-of-the-moment">
+            <h3>Your gif of the moment</h3>
 
           </ul>
           <ul id="repo-gifs">

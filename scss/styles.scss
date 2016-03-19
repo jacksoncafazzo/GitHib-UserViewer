@@ -3,25 +3,44 @@ form {
   margin:auto;
 }
 label {
-  width:25%;
+  width:100%;
 }
 label, input {
   display: inline-block;
+  text-align: left;
 }
 input {
-  width: 75%;
+  width: 100%;
 }
 input[type=submit] {
   width:100%;
 }
-
-.gif-of-the-moment {
-  width: 200px;
+.gif-of-the-moment h3 {
+  text-align: left;
+}
+.gif-of-the-moment img {
+  width: 350px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  float: left;
 }
-.gif-of-the-moment img {
 
+a {
+  background-color: 2A9FCF;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+
+}
+
+a:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+a.header {
+  text-align: center;
 }
